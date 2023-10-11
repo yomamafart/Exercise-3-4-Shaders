@@ -11,13 +11,13 @@
 [ext_resource type="PackedScene" uid="uid://drxwrc1b5f0hw" path="res://UI/HUD.tscn" id="7"]
 [ext_resource type="PackedScene" uid="uid://y45cm1yl1uhq" path="res://UI/Instructions.tscn" id="8"]
 [ext_resource type="Script" path="res://Effects/Camera.gd" id="9"]
-[ext_resource type="AudioStream" uid="uid://df2uyenctyvo5" path="res://Assets/music.mp3" id="10"]
 [ext_resource type="Script" path="res://Ball/Comet_Container.gd" id="11"]
-[ext_resource type="AudioStream" uid="uid://cnh4fl3ja8mv2" path="res://Assets/brick.wav" id="12"]
-[ext_resource type="AudioStream" uid="uid://c7n5atesdhxql" path="res://Assets/die.wav" id="13"]
-[ext_resource type="AudioStream" uid="uid://csy3t2wdgxjwf" path="res://Assets/wall.wav" id="14"]
-[ext_resource type="AudioStream" uid="uid://v3k7bq3lwjcw" path="res://Assets/paddle.wav" id="15"]
+[ext_resource type="AudioStream" uid="uid://cmfwwohn0mp03" path="res://Assets/paddle game music'.wav" id="14_r68er"]
+[ext_resource type="AudioStream" uid="uid://bv5f8eskf07t" path="res://Assets/Ibomb.wav" id="15_2jndg"]
 [ext_resource type="Script" path="res://Effects/Fever.gd" id="16"]
+[ext_resource type="AudioStream" uid="uid://8k0xlvl6odbl" path="res://Assets/impact.wav" id="16_2r1hx"]
+[ext_resource type="AudioStream" uid="uid://cqw66edws0t4m" path="res://Assets/space boots.wav" id="17_vg7v8"]
+[ext_resource type="AudioStream" uid="uid://1xfacvfkpqrx" path="res://Assets/falling down.wav" id="18_ojsyv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0rxfk"]
 shader = ExtResource("2_k1s30")
@@ -129,19 +129,19 @@ script = ExtResource("9")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 process_mode = 3
-stream = ExtResource("10")
+stream = ExtResource("14_r68er")
 autoplay = true
 
 [node name="Paddle_Audio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("15")
+stream = ExtResource("15_2jndg")
 
 [node name="Wall_Audio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("14")
+stream = ExtResource("16_2r1hx")
 
 [node name="Brick_Audio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("12")
+stream = ExtResource("17_vg7v8")
 
 [node name="Ball_Audio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("13")
+stream = ExtResource("18_ojsyv")
 
 [connection signal="timeout" from="Fever/Timer" to="Fever" method="_on_Timer_timeout"]
